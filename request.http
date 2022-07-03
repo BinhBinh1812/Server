@@ -1,0 +1,44 @@
+//REGISTER
+POST http://localhost:8000/v1/auth/register
+content-type: application/json
+
+{
+    "username" : "tranthaibinh",
+    "phonenumber": "0825022279",
+    "email" : "tranthaibinh0@gmail.com",
+    "password" : "123456789"
+}
+
+###
+
+//LOGIN
+POST http://localhost:8000/v1/auth/login
+Content-Type: application/json
+
+{
+    "username": "tranthaibinh",
+    "password": "123456789"
+}
+
+###
+
+//create conversation
+POST http://localhost:8000/v1/conversation/
+Content-Type: application/json
+
+{
+    "senderId": "123123",
+    "receiverId": "123456789"
+}
+
+###
+
+//create message
+POST http://localhost:8000/v1/message/
+Content-Type: application/json
+
+{
+    "conversationId": "123123",
+    "sender": "123",
+    "text": "khoon "
+}
